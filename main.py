@@ -6,6 +6,7 @@ cash_status = True
 earnings = 1000
 first_status = True
 winning_list = Winning_list()
+bonus_status = True
 cash = Cash()
 while earnings / 1000 >= 1:
     lottoDict = {"three" : 0, "four" : 0, "five" : 0, "bonus" : 0, "six" : 0}
@@ -17,7 +18,6 @@ while earnings / 1000 >= 1:
     winning_list_status = True
     while winning_list_status == True:
         winning_list_status = winning_list.get_winning_list()
-    bonus_status = True
     while bonus_status == True:
         bonus_status = winning_list.get_bonus_num()
     for i in range(cash.number_of_lottoes):
