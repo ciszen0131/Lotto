@@ -5,7 +5,6 @@ from cash import Cash
 cash_status = True
 earnings = 1000
 first_status = True
-return_status = False
 winning_list = Winning_list()
 cash = Cash()
 while earnings / 1000 >= 1:
@@ -14,10 +13,7 @@ while earnings / 1000 >= 1:
         while cash_status == True:
             cash_status = cash.get_cash()
         first_status = False
-    while return_status == True:
-        cash.number_of_lottoes = earnings//1000
-        return_status = False
-    return_status = True
+    cash.number_of_lottoes = earnings//1000
     winning_list_status = True
     while winning_list_status == True:
         winning_list_status = winning_list.get_winning_list()
